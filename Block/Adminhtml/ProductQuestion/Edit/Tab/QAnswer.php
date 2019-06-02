@@ -1,5 +1,5 @@
 <?php
- /**
+/**
  * @category  Bhavin ProductQA
  * @package   Bhavin_ProductQA
  * @copyright Copyright (c) 2019 Bhavin
@@ -7,31 +7,29 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\ProductQuestion\Edit\Tab;
 
+use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Customer\Model\Session as CustomerSession;
+use \Bhavin\ProductQA\Helper\Data;
+use \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\CollectionFactory as AnswerCollection;
 use \Magento\Backend\Block\Template\Context;
 use \Magento\Framework\Registry;
-use \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\CollectionFactory as AnswerCollection;
-use \Bhavin\ProductQA\Helper\Data;
-use Magento\Customer\Model\Session as CustomerSession;
-use Bhavin\ProductQA\Model\Source\Status;
-use Magento\Store\Model\StoreManagerInterface;
 
-class QAnswer extends \Bhavin\ProductQA\Block\ProductQAnswer
-{
+class QAnswer extends \Bhavin\ProductQA\Block\ProductQAnswer {
 	/**
-     * @var int
-     */
-   protected $_status ;
-	
+	 * @var int
+	 */
+	protected $_status;
+
 	/**
-     * @var $_storeManager
-     */
-	protected $_storeManager;	
-    /**
-     * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Magento\Framework\Registry $registry
-     * @param array $data
-     */
-    public function __construct(
+	 * @var $_storeManager
+	 */
+	protected $_storeManager;
+	/**
+	 * @param \Magento\Framework\View\Element\Template\Context $context
+	 * @param \Magento\Framework\Registry $registry
+	 * @param array $data
+	 */
+	public function __construct(
 		Data $helper,
 		AnswerCollection $productQuestionAnswer,
 		Registry $coreRegistry,
@@ -39,121 +37,110 @@ class QAnswer extends \Bhavin\ProductQA\Block\ProductQAnswer
 		CustomerSession $_customerSession,
 		Status $status,
 		array $data = []
-	) 
-	{	
+	) {
 		$this->setTemplate('productqa/answers.phtml');
-		
-        parent::__construct($helper	,$productQuestionAnswer,$coreRegistry,$context,$_customerSession,$data);
-		
+
+		parent::__construct($helper, $productQuestionAnswer, $coreRegistry, $context, $_customerSession, $data);
+
 		//$this->_page_size = 5;
-		
+
 		$this->_storeManager = $context->getStoreManager();
-				
+
 		$this->_status = $status->getOptionArray();
-		
-    }	
-	/**
-     * canShowLoadMore
-     *
-	 * return boolean
-     */
-	public function canShowLoadMore()
-	{
-		return $this->getTotalQuestion() > $this->getProductQaHelper()->getQuestionPageSize() ? true : false;		
+
 	}
 	/**
-     * isApprove
-     * 
+	 * canShowLoadMore
+	 *
 	 * return boolean
-     */	
-	public function isApprove($status_id = 0)
-	{
+	 */
+	public function canShowLoadMore() {
+		return $this->getTotalQuestion() > $this->getProductQaHelper()->getQuestionPageSize() ? true : false;
+	}
+	/**
+	 * isApprove
+	 *
+	 * return boolean
+	 */
+	public function isApprove($status_id = 0) {
 		return $status_id == Status::STATUS_APPROVE ? true : false;
 	}
 	/**
-     * getStatusText
-     * 
+	 * getStatusText
+	 *
 	 * return string url
-     */	
-	public function getStatusText($status_id = 0)
-	{
-		return __($this->_status[$status_id ]);
+	 */
+	public function getStatusText($status_id = 0) {
+		return __($this->_status[$status_id]);
 	}
 	/**
-     * getApproveUrl
-     * 
+	 * getApproveUrl
+	 *
 	 * return string url
-     */	
-	public function getApproveUrl($question_id)
-	{
-		return $this->getUrl("bhavin_productqa/product_questionanswer/approve/id/".$question_id);
+	 */
+	public function getApproveUrl($question_id) {
+		return $this->getUrl("productqa/product_questionanswer/approve/id/" . $question_id);
 	}
 	/**
-     * getLoadMoreUrl
-     * 
+	 * getLoadMoreUrl
+	 *
 	 * return string url
-     */	
-	public function getDisapproveUrl($question_id)
-	{
-		return $this->getUrl("bhavin_productqa/product_questionanswer/disapprove/id/".$question_id);
+	 */
+	public function getDisapproveUrl($question_id) {
+		return $this->getUrl("productqa/product_questionanswer/disapprove/id/" . $question_id);
 	}
 	/**
-     * getLoadMoreUrl
-     * 
+	 * getLoadMoreUrl
+	 *
 	 * return string url
-     */	
-	public function getLoadMoreUrl()
-	{
-		return $this->getUrl("bhavin_productqa/productanswer/answer/question_id/".$this->getQuestionId());
+	 */
+	public function getLoadMoreUrl() {
+		return $this->getUrl("productqa/productanswer/answer/question_id/" . $this->getQuestionId());
 	}
 	/**
-     * getFormUrl
-     * 
+	 * getFormUrl
+	 *
 	 * return string url
-     */	
-	public function getFormUrl()
-	{
-        return $this->_storeManager->getStore($this->getStoreId())->getBaseUrl()."productqa/question/answer/question_id/".$this->getQuestionId();
+	 */
+	public function getFormUrl() {
+		return $this->_storeManager->getStore($this->getStoreId())->getBaseUrl() . "productqa/question/answer/question_id/" . $this->getQuestionId();
 	}
-	
+
 	/**
-     * getFormUrl
-     * 
+	 * getFormUrl
+	 *
 	 * return string url
-     */	
-	public function getApproveStatus()
-	{
-        return Status::STATUS_APPROVE;
+	 */
+	public function getApproveStatus() {
+		return Status::STATUS_APPROVE;
 	}
-	
+
 	/**
-     * getProductQuestions
-     * 
-     * ProductAnswer of ProductQA
+	 * getProductQuestions
+	 *
+	 * ProductAnswer of ProductQA
 	 *
 	 * return collection
-     */	
-	public function getQuestionsAnswer()
-	{
-		$answers  = [];
-		
+	 */
+	public function getQuestionsAnswer() {
+		$answers = [];
+
 		$question_id = $this->getQuestionId();
-		
-		if($question_id)
-		{
-		 	$this->_answersCollection = $this->_productQuestionAnswer->create();
-			
-			$this->_answersCollection->addFieldToFilter('question_id',$question_id)
+
+		if ($question_id) {
+			$this->_answersCollection = $this->_productQuestionAnswer->create();
+
+			$this->_answersCollection->addFieldToFilter('question_id', $question_id)
 				->setPageSize($this->_page_size)
 				->setCurPage($this->getCurrPage())
-				->setOrder('created_at','DESC');
-				
+				->setOrder('created_at', 'DESC');
+
 			$answers = $this->_answersCollection;
 		}
-		
-		$this->_total_answer = $this->_answersCollection ->getSize();
-		
-		return $answers ;
+
+		$this->_total_answer = $this->_answersCollection->getSize();
+
+		return $answers;
 	}
-	
+
 }

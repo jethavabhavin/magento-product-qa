@@ -1,67 +1,67 @@
 <ul>
-<?php foreach($this->getQuestionsAnswer() as $answer):?>
+<?php  foreach($this->getQuestionsAnswer() as $answer):?>
 	<li>
 		<div class="amswer " >
 			<div class="ansheader">
 				<div class="anstitle">
-					<?php echo $answer->getAnswer()?>
+					<?php  echo $answer->getAnswer()?>
 				</div>
 				<div class="actions">
-						<a href="<?php echo $this->getLikeActionUrl( $answer->getId() )?>" class="like action"><img src="<?php echo $block->getViewFileUrl('Bhavin_ProductQA::images/likes1.png'); ?>">(<span class="count"><?php echo $answer->getLikes()?></span>)</a>
-						<a href="<?php echo $this->getDislikeActionUrl( $answer->getId() )?>" class="like action"><img src="<?php echo $block->getViewFileUrl('Bhavin_ProductQA::images/dislike.png'); ?>">(<span class="count"><?php echo  $answer->getDislikes()?></span>)</a>
+						<a href="<?php  echo $this->getLikeActionUrl( $answer->getId() )?>" class="like action"><img src="<?php  echo $block->getViewFileUrl('Bhavin_ProductQA::images/likes1.png'); ?>">(<span class="count"><?php  echo $answer->getLikes()?></span>)</a>
+						<a href="<?php  echo $this->getDislikeActionUrl( $answer->getId() )?>" class="like action"><img src="<?php  echo $block->getViewFileUrl('Bhavin_ProductQA::images/dislike.png'); ?>">(<span class="count"><?php  echo  $answer->getDislikes()?></span>)</a>
 					</div>
 				<div class="date-n-customer-name">
 					<div class="name">
-						<span><?php echo $answer->getName()?></span>
+						<span><?php  echo $answer->getName()?></span>
 					</div>
 					<div class="date">
-						<span><?php echo $this->formatDate($answer->getCreatedAt())?></span>
+						<span><?php  echo $this->formatDate($answer->getCreatedAt())?></span>
 					</div>					
 				</div>
 			</div>
 		</div>
 	</li>
-<?php endforeach?>
+<?php  endforeach?>
 </ul>
 
-<?php if($this->canShowLoadMore()):?>
+<?php  if($this->canShowLoadMore()):?>
 <div class="fieldset">
 	<div class="actions">
-		<button type="button" title="Load More..." class="  loadmoreanswerbutton" data-url="<?php echo $this->getLoadMoreUrl()?>" >
-			<span><?php echo __('Load More Answer...');?></span>
+		<button type="button" title="Load More..." class="  loadmoreanswerbutton" data-url="<?php  echo $this->getLoadMoreUrl()?>" >
+			<span><?php  echo __('Load More Answer...');?></span>
 		</button>
 	</div>
 </div>
-<?php endif?>
+<?php  endif?>
 
 <div class="fieldset">
 	<div class="actions">
-		<button type="submit" title="Ask Question?" class="action primary answerbutton" onclick='jQuery("#product-question-answer-<?php echo $this->getQuestionId()?>").slideToggle()' >
-			<span><?php echo __('Write Answer');?></span>
+		<button type="submit" title="Ask Question?" class="action primary answerbutton" onclick='jQuery("#product-question-answer-<?php  echo $this->getQuestionId()?>").slideToggle()' >
+			<span><?php  echo __('Write Answer');?></span>
 		</button>
 	</div>
 </div>
 
 <div id="answer-message" class="messages"></div>
 
-<div class="answer-form" id="product-question-answer-<?php echo $this->getQuestionId()?>">
-	<form action="<?php echo $this->getFormUrl() ?>" method="post" class="question-answer-form">
-		<input type="hidden" value="<?php echo $this->getFormKey();?>" name="form_key"/>
+<div class="answer-form" id="product-question-answer-<?php  echo $this->getQuestionId()?>">
+	<form action="<?php  echo $this->getFormUrl() ?>" method="post" class="question-answer-form">
+		<input type="hidden" value="<?php  echo $this->getFormKey();?>" name="form_key"/>
 		<fieldset class="fieldset">					
 			<div class="field required">
-				<label class="label" for="name"> <?php echo __('Name')?> : </label>
+				<label class="label" for="name"> <?php  echo __('Name')?> : </label>
 				<div class="control">
-					<input type="text" id="name" class="input-text" required aria-required="true" value="<?php echo trim($this->getCustomerName())?>" name="name">
+					<input type="text" id="name" class="input-text" required aria-required="true" value="<?php  echo trim($this->getCustomerName())?>" name="name">
 				</div>						
 			</div>
 			<div class="field required">
-				<label class="label" for="email"><?php echo __('Email')?>:</label> 
+				<label class="label" for="email"><?php  echo __('Email')?>:</label> 
 				<div class="control">
-					<input type="email" id="email" name="email" class="input-text" required aria-required="true"  value="<?php echo $this->getCustomerEmail()?>">							
+					<input type="email" id="email" name="email" class="input-text" required aria-required="true"  value="<?php  echo $this->getCustomerEmail()?>">							
 				</div>
 			</div>
 			<div class="field required">
-				<label  class="label" for="question"><?php echo __('Your Answer')?></label> 
+				<label  class="label" for="question"><?php  echo __('Your Answer')?></label> 
 				<div class="control">
 					<textarea name="answer" id="answer" maxlength="255" minlength="15" required class="input-text" aria-required="true" name="answer"></textarea>					
 				</div>
@@ -69,10 +69,10 @@
 		</fieldset>
 		<div class="actions-toolbar ">
 			<div class="primary actions-primary">
-				<button type="submit" required class="action submit primary"><span><?php echo __('Submit Answer')?></span></button>
+				<button type="submit" required class="action submit primary"><span><?php  echo __('Submit Answer')?></span></button>
 			</div>
 			<div class="primary actions-primary">
-				<button type="button" class=" submit " onclick='jQuery("#product-question-answer-<?php echo $this->getQuestionId()?>").slideToggle()'><span><?php echo __('Cancel')?></span></button>
+				<button type="button" class=" submit " onclick='jQuery("#product-question-answer-<?php  echo $this->getQuestionId()?>").slideToggle()'><span><?php  echo __('Cancel')?></span></button>
 			</div>
 		</div>
 	</form>

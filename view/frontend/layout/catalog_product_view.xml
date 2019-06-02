@@ -13,7 +13,7 @@
 	</head> -->
 	<body>
         <referenceBlock name="product.info.details">
-          <block class="Bhavin\ProductQA\Block\ProductQA" name="product.question" after="additional" template="productqa/product_question.phtml" group="detailed_info" ifconfig="bhavin_productqa/general/enable">
+          <block class="Bhavin\ProductQA\Block\ProductQA" name="product.question" after="additional" template="productqa/product_question.phtml" group="detailed_info" ifconfig="productqa/general/enable">
 				<block class="Bhavin\ProductQA\Block\ProductQAnswer" name="product.question.answers" as="answer" template="productqa/product_question_answer.phtml" />
 				<arguments>
 					<argument translate="true" name="title" xsi:type="string">Product Question</argument>
@@ -32,7 +32,7 @@
                     </block>
                 </container>
 				<container name="qacaptcha" label="Captcha">
-                    <block class="Magento\Captcha\Block\Captcha" name="captcha" after="-" cacheable="false" ifconfig="bhavin_productqa/general/captcha">
+                    <block class="Magento\Captcha\Block\Captcha" name="captcha" after="-" cacheable="false" ifconfig="productqa/general/captcha">
                         <action method="setFormId">
                             <argument name="formId" xsi:type="string">qa_captcha_form_1</argument>
                         </action>

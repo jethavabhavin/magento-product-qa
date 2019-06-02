@@ -13,11 +13,11 @@
 				sortOrder="51" resource="Bhavin_ProductQA::productqa" parent="Magento_Catalog::catalog" />
 				
 			<add id="Bhavin_ProductQA::product_question" title="Questions" module="Bhavin_ProductQA" 
-				sortOrder="10" action="bhavin_productqa/product_question" resource="Bhavin_ProductQA::product_question" 
+				sortOrder="10" action="productqa/product_question" resource="Bhavin_ProductQA::product_question" 
 				parent="Bhavin_ProductQA::productqa"/>
 				
 			<add id="Bhavin_ProductQA::product_questionanswer" title="Answers" module="Bhavin_ProductQA" 
-				sortOrder="10" action="bhavin_productqa/product_questionanswer" resource="Bhavin_ProductQA::product_questionanswer" 
+				sortOrder="10" action="productqa/product_questionanswer" resource="Bhavin_ProductQA::product_questionanswer" 
 				parent="Bhavin_ProductQA::productqa"/>
 
     </menu>

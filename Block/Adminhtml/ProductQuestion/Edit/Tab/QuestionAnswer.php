@@ -1,5 +1,5 @@
 <?php
- /**
+/**
  * @category  Bhavin ProductQA
  * @package   Bhavin_ProductQA
  * @copyright Copyright (c) 2019 Bhavin
@@ -7,89 +7,79 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\ProductQuestion\Edit\Tab;
 
-use \Magento\Backend\Block\Template\Context;
 use \Magento\Framework\Registry;
-use \Magento\Framework\Data\FormFactory;
-use \Magento\Cms\Ui\Component\Listing\Column\Cms\Options;
 
-class QuestionAnswer extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface
-{	
-   /**
-     * Prepare form
-     *
-     * @return $this
-     */
-    protected function _prepareForm()
-    {
-        /** @var \Bhavin\ProductQA\Model\ProductQuestion $product_question */
-        $product_question = $this->_coreRegistry->registry('bhavin_product_question');
-		
-        $form = $this->_formFactory->create();
-		
-        $form->setHtmlIdPrefix('answers_');
-        $form->setFieldNameSuffix('answers');
-        
-		 $fieldset = $form->addFieldset(
-            'base_fieldset',
-            [
-                'legend' => __('Answers'),
-                'class'  => 'fieldset-wide'
-            ]
-        );
-	
+class QuestionAnswer extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface {
+	/**
+	 * Prepare form
+	 *
+	 * @return $this
+	 */
+	protected function _prepareForm() {
+		/** @var \Bhavin\ProductQA\Model\ProductQuestion $product_question */
+		$product_question = $this->_coreRegistry->registry('bhavin_product_question');
+
+		$form = $this->_formFactory->create();
+
+		$form->setHtmlIdPrefix('answers_');
+		$form->setFieldNameSuffix('answers');
+
+		$fieldset = $form->addFieldset(
+			'base_fieldset',
+			[
+				'legend' => __('Answers'),
+				'class' => 'fieldset-wide',
+			]
+		);
+
 		$answerBlock = $this->getLayout()->createBlock(QAnswer::class)->setQuestionId($product_question->getId())->setStoreId($product_question->getStoreId());
-		
+
 		$fieldset->addField(
-            'answer_value_container',
-            'note',
-            [
-                    'text' => $answerBlock->toHtml(),				
-            ]
-        );
-		
-        $this->setForm($form);
-		
-        return parent::_prepareForm();
-    }
+			'answer_value_container',
+			'note',
+			[
+				'text' => $answerBlock->toHtml(),
+			]
+		);
 
-	
-    /**
-     * Prepare Sizeadviser for tab
-     *
-     * @return string
-     */
-    public function getTabLabel()
-    {
-        return __('Answers');
-    }
+		$this->setForm($form);
 
-    /**
-     * Prepare title for tab
-     *
-     * @return string
-     */
-    public function getTabTitle()
-    {
-        return $this->getTabLabel();
-    }
+		return parent::_prepareForm();
+	}
 
-    /**
-     * Can show tab in tabs
-     *
-     * @return boolean
-     */
-    public function canShowTab()
-    {
-        return true;
-    }
+	/**
+	 * Prepare Sizeadviser for tab
+	 *
+	 * @return string
+	 */
+	public function getTabLabel() {
+		return __('Answers');
+	}
 
-    /**
-     * Tab is hidden
-     *
-     * @return boolean
-     */
-    public function isHidden()
-    {
-        return false;
-    }
+	/**
+	 * Prepare title for tab
+	 *
+	 * @return string
+	 */
+	public function getTabTitle() {
+		return $this->getTabLabel();
+	}
+
+	/**
+	 * Can show tab in tabs
+	 *
+	 * @return boolean
+	 */
+	public function canShowTab() {
+		return true;
+	}
+
+	/**
+	 * Tab is hidden
+	 *
+	 * @return boolean
+	 */
+	public function isHidden() {
+		return false;
+	}
 }
