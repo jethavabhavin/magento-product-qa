@@ -1,13 +1,13 @@
 <?php
 namespace Bhavin\ProductQA\Controller\Question;
 
-use \Bhavin\ProductQA\Model\ProductQuestionAnswerFactory;
+use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
 use \Magento\Framework\App\Action\Context;
 use \Magento\Framework\View\Result\LayoutFactory;
 
 class Answerall extends \Magento\Framework\App\Action\Action {
 	/**
-	 * @var \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionFactory
+	 * @var \Bhavin\ProductQA\Model\ResourceModel\QuestionFactory
 	 */
 	protected $_productQAnswer = false;
 	/**
@@ -24,7 +24,7 @@ class Answerall extends \Magento\Framework\App\Action\Action {
 	public function __construct(
 		Context $context,
 		LayoutFactory $resultLayoutFactory,
-		ProductQuestionAnswerFactory $productQAnswer
+		QuestionAnswerFactory $productQAnswer
 	) {
 		$this->_productQAnswer = $productQAnswer;
 

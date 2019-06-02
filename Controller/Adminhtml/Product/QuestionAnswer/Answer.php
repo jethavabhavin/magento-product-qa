@@ -1,11 +1,11 @@
 <?php
-namespace Bhavin\ProductQA\Controller\Question;
+namespace Bhavin\ProductQA\Controller\Adminhtml\Product\QuestionAnswer;
 
 use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Magento\Framework\App\Action\Context;
+use \Magento\Backend\App\Action\Context;
 use \Magento\Framework\View\Result\LayoutFactory;
 
-class Index extends \Magento\Framework\App\Action\Action {
+class Answer extends \Magento\Backend\App\Action {
 	/**
 	 * @var \Bhavin\ProductQA\Model\ResourceModel\QuestionFactory
 	 */
@@ -34,7 +34,6 @@ class Index extends \Magento\Framework\App\Action\Action {
 	}
 
 	public function execute() {
-		//print_r(get_class_methods($this->_resultLayoutFactory->create()));exit;
 		return $this->_resultLayoutFactory->create();
 	}
 }

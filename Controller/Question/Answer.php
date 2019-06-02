@@ -2,8 +2,8 @@
 namespace Bhavin\ProductQA\Controller\Question;
 
 use \Bhavin\ProductQA\Helper\Email as QaEmailHelper;
-use \Bhavin\ProductQA\Model\ProductQuestionAnswerFactory;
-use \Bhavin\ProductQA\Model\ProductQuestionFactory;
+use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
+use \Bhavin\ProductQA\Model\QuestionFactory;
 use \Bhavin\ProductQA\Model\Source\Status;
 use \Bhavin\ProductQA\Model\Source\UserType;
 use \Magento\Catalog\Model\Product;
@@ -26,7 +26,7 @@ class Answer extends \Magento\Framework\App\Action\Action {
 	 */
 	protected $_timezone;
 	/**
-	 * @var \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionFactory
+	 * @var \Bhavin\ProductQA\Model\ResourceModel\QuestionFactory
 	 */
 	protected $_productQAnswer = false;
 	/**
@@ -44,7 +44,7 @@ class Answer extends \Magento\Framework\App\Action\Action {
 		Context $context,
 		JsonFactory $resultJsonFactory,
 		CustomerSession $_customerSession,
-		ProductQuestionAnswerFactory $productQAnswer,
+		QuestionAnswerFactory $productQAnswer,
 		QaEmailHelper $qaEmailHelper,
 		QaHelper $qaHelper,
 		TimezoneInterface $timezone,

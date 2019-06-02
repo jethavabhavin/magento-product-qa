@@ -2,7 +2,7 @@
 namespace Bhavin\ProductQA\Controller\Question;
 
 use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\ProductQuestionFactory;
+use \Bhavin\ProductQA\Model\QuestionFactory;
 use \Bhavin\ProductQA\Model\Source\Status;
 use \Bhavin\ProductQA\Model\Source\UserType;
 use \Magento\Captcha\Helper\Data as CaptchaHelper;
@@ -14,7 +14,7 @@ use \Magento\Store\Model\StoreManagerInterface;
 
 class Ask extends \Magento\Framework\App\Action\Action {
 	/**
-	 * @var \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionFactory
+	 * @var \Bhavin\ProductQA\Model\ResourceModel\QuestionFactory
 	 */
 	protected $_productQuestion = false;
 	/**
@@ -54,7 +54,7 @@ class Ask extends \Magento\Framework\App\Action\Action {
 		Context $context,
 		JsonFactory $resultJsonFactory,
 		CustomerSession $_customerSession,
-		ProductQuestionFactory $productQuestion,
+		QuestionFactory $productQuestion,
 		CaptchaStringResolver $captchaStringResolver,
 		StoreManagerInterface $storeManager,
 		CaptchaHelper $captchaHelper

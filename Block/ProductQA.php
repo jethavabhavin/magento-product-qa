@@ -10,8 +10,8 @@ namespace Bhavin\ProductQA\Block;
 use Bhavin\ProductQA\Model\Source\Status;
 use Magento\Customer\Model\Session as CustomerSession;
 use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\CollectionFactory as AnswerCollection;
-use \Bhavin\ProductQA\Model\ResourceModel\ProductQuestion\CollectionFactory as QuestionCollection;
+use \Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory as AnswerCollection;
+use \Bhavin\ProductQA\Model\ResourceModel\Question\CollectionFactory as QuestionCollection;
 use \Bhavin\ProductQA\Model\Source\ActionType;
 use \Magento\Backend\Block\Template\Context;
 use \Magento\Catalog\Model\ProductFactory;
@@ -63,11 +63,11 @@ class ProductQA extends \Magento\Framework\View\Element\Template {
 	 */
 	protected $_questionCollection = [];
 	/**
-	 * @var \Bhavin\ProductQA\Model\ResourceModel\ProductQuestion\CollectionFactory
+	 * @var \Bhavin\ProductQA\Model\ResourceModel\Question\CollectionFactory
 	 */
 	protected $_productQuestion = false;
 	/**
-	 * @var \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\CollectionFactory
+	 * @var \Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory
 	 */
 	protected $_productQuestionAnswer = false;
 	/**
@@ -307,13 +307,13 @@ class ProductQA extends \Magento\Framework\View\Element\Template {
 	}
 
 	/**
-	 * getProductQuestions
+	 * getQuestions
 	 *
-	 * ProductQuestions of ProductQA
+	 * Questions of ProductQA
 	 *
 	 * return collection
 	 */
-	public function getProductQuestions() {
+	public function getQuestions() {
 		if ($this->_currentProduct && $this->_currentProduct->getId()) {
 			$this->_questionCollection = $this->_productQuestion->create();
 
@@ -357,7 +357,7 @@ class ProductQA extends \Magento\Framework\View\Element\Template {
 		return $this->_helper;
 	}
 	/**
-	 * getProductQuestions
+	 * getQuestions
 	 *
 	 * ProductAnswer of ProductQA
 	 *

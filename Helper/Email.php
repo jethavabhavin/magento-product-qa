@@ -8,7 +8,7 @@
 namespace Bhavin\ProductQA\Helper;
 
 use Magento\Framework\Mail\Template\TransportBuilder;
-use \Bhavin\ProductQA\Model\ProductQuestionFactory;
+use \Bhavin\ProductQA\Model\QuestionFactory;
 use \Bhavin\ProductQA\Model\Source\Status;
 use \Magento\Catalog\Helper\ImageFactory;
 use \Magento\Catalog\Model\Product;
@@ -30,7 +30,7 @@ class Email {
 	 */
 	protected $_imageHelperFactory = false;
 	/**
-	 * @var \Bhavin\ProductQA\Model\ResourceModel\ProductQuestionFactory
+	 * @var \Bhavin\ProductQA\Model\ResourceModel\QuestionFactory
 	 */
 	protected $_productQuestion = false;
 	/**
@@ -56,7 +56,7 @@ class Email {
 		TransportBuilder $transportBuilder,
 		Product $product,
 		ImageFactory $imageHelperFactory,
-		ProductQuestionFactory $productQuestion,
+		QuestionFactory $productQuestion,
 		QaHelper $qaHelper,
 		TimezoneInterface $timezone,
 		StoreManagerInterface $storeManager

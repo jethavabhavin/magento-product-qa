@@ -8,20 +8,17 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <!-- <head>
-		 <css src="Bhavin_ProductQA::css/style.css" />
-	</head> -->
-	<body>
+    <body>
         <referenceBlock name="product.info.details">
-          <block class="Bhavin\ProductQA\Block\ProductQA" name="product.question" after="additional" template="productqa/product_question.phtml" group="detailed_info" ifconfig="productqa/general/enable">
-				<block class="Bhavin\ProductQA\Block\ProductQAnswer" name="product.question.answers" as="answer" template="productqa/product_question_answer.phtml" />
+          <block class="Bhavin\ProductQA\Block\ProductQA" name="question" after="additional" template="productqa/question.phtml" group="detailed_info" ifconfig="productqa/general/enable">
+				<block class="Bhavin\ProductQA\Block\ProductQAnswer" name="question.answers" as="answer" template="productqa/question_answer.phtml" />
 				<arguments>
 					<argument translate="true" name="title" xsi:type="string">Product Question</argument>
 				</arguments>
 				<container name="form.additional.info" label="Form Additional Info">
                     <block class="Magento\Captcha\Block\Captcha" name="captcha" after="-" cacheable="false">
                         <action method="setFormId">
-                            <argument name="formId" xsi:type="string">custom_form</argument>
+                            <argument name="formId" xsi:type="string">question_form</argument>
                         </action>
                         <action method="setImgWidth">
                             <argument name="width" xsi:type="string">230</argument>
@@ -47,7 +44,7 @@
           </block>
         </referenceBlock>
 		<referenceBlock name="head.components">
-            <block class="Magento\Framework\View\Element\Js\Components" name="captcha_page_head_components" template="Magento_Captcha::js/components.phtml"/>
+            <block class="Magento\Framework\View\Element\Js\Components" ifconfig="productqa/general/captcha" name="captcha_page_head_components" template="Magento_Captcha::js/components.phtml"/>
         </referenceBlock>
     </body>
 </page>

@@ -9,7 +9,7 @@
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
     <router id="admin">
-        <route id="bhavin_productqa" frontName="productqa">
+        <route id="productqa" frontName="productqa">
             <module name="Bhavin_ProductQA" before="Magento_Backend"/>
         </route>
     </router>

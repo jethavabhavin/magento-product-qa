@@ -19,35 +19,35 @@
     </virtualType>	
 	
 	<!-- Start Product Question Settigns XML-->
-	<virtualType name="BhavinProductQAProductQuestionGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+	<virtualType name="BhavinProductQAQuestionGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>
-            <argument name="collection" xsi:type="object" shared="false">Bhavin\ProductQA\Model\ResourceModel\ProductQuestion\Collection</argument>
+            <argument name="collection" xsi:type="object" shared="false">Bhavin\ProductQA\Model\ResourceModel\Question\Collection</argument>
             <argument name="filterPool" xsi:type="object" shared="false">BhavinProductQAGirdFilterPool</argument>
         </arguments>
     </virtualType>
-	<type name="Bhavin\ProductQA\Model\ResourceModel\ProductQuestion\Grid\Collection">
+	<type name="Bhavin\ProductQA\Model\ResourceModel\Question\Grid\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">bhavin_product_question</argument>
-            <argument name="eventPrefix" xsi:type="string">bhavin_productqa_product_question_grid_collection</argument>
+            <argument name="eventPrefix" xsi:type="string">bhavin_productqa_question_grid_collection</argument>
             <argument name="eventObject" xsi:type="string">product_question_grid_collection</argument>
-            <argument name="resourceModel" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\ProductQuestion</argument>
+            <argument name="resourceModel" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\Question</argument>
         </arguments>
     </type>
 	<!-- End Product Question Settigns XML-->
 	
 	<!-- Start Product Answer Settigns XML-->
-	<virtualType name="BhavinProductQAProductQuestionAnswerGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+	<virtualType name="BhavinProductQAQuestionAnswerGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>
-            <argument name="collection" xsi:type="object" shared="false">Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\Collection</argument>
+            <argument name="collection" xsi:type="object" shared="false">Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\Collection</argument>
             <argument name="filterPool" xsi:type="object" shared="false">BhavinProductQAGirdFilterPool</argument>
         </arguments>
     </virtualType>
-	<type name="Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\Grid\Collection">
+	<type name="Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\Grid\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">bhavin_productanswer</argument>
             <argument name="eventPrefix" xsi:type="string">bhavin_productqa_productanswer_grid_collection</argument>
             <argument name="eventObject" xsi:type="string">productanswer_grid_collection</argument>
-            <argument name="resourceModel" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer</argument>
+            <argument name="resourceModel" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer</argument>
         </arguments>
     </type>
 	<!-- End  Product Answer Settigns XML-->
@@ -55,8 +55,8 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-				<item name="bhavin_productqa_product_question_listing_data_source" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\ProductQuestion\Grid\Collection</item>				
-				<item name="bhavin_productqa_product_questionanswer_listing_data_source" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\ProductQuestionAnswer\Grid\Collection</item>				
+				<item name="bhavin_productqa_question_listing_data_source" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\Question\Grid\Collection</item>				
+				<item name="bhavin_productqa_questionanswer_listing_data_source" xsi:type="string">Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\Grid\Collection</item>				
             </argument>
         </arguments>
     </type>

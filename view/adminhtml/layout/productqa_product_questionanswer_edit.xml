@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Bhavin ProductQA
+ * @package   Bhavin_ProductQA
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<update handle="editor"/>
+	<!-- <head>
+		 <css src="Bhavin_ProductQA::css/style.css" />
+	</head> -->
+    <body>
+        <referenceContainer name="content">
+            <block class="Bhavin\ProductQA\Block\Adminhtml\QuestionAnswer\Edit" name="bhavin_productqa_product_questionanswer_edit"/> 
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Bhavin\ProductQA\Block\Adminhtml\QuestionAnswer\Edit\Tabs" name="bhavin_productqa_product_questionanswer_tabs">
+                <block class="Bhavin\ProductQA\Block\Adminhtml\QuestionAnswer\Edit\Tab\QuestionAnswer" name="bhavin_productqa_product_questionanswer_edit_tab_product_questionanswer"/>
+				<action method="addTab">
+                    <argument name="name" xsi:type="string">product_questionanswer</argument>
+                    <argument name="block" xsi:type="string">bhavin_productqa_product_questionanswer_edit_tab_product_questionanswer</argument>
+                </action>
+            </block>
+        </referenceContainer> 
+    </body>
+</page>

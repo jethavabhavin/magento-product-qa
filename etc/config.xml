@@ -9,7 +9,7 @@
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
     <default>
-        <bhavin_productqa>
+        <productqa>
             <general>
                 <enable>0</enable>
                 <qpaze_size>5</qpaze_size>
@@ -17,7 +17,7 @@
                 <sendemail>0</sendemail>
                 <!-- <anspaze_size>10</anspaze_size> -->
             </general>				
-        </bhavin_productqa>
+        </productqa>
 		<customer>
             <captcha>
                 <shown_to_logged_in_user>

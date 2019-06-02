@@ -2,8 +2,8 @@
 namespace Bhavin\ProductQA\Controller\Question;
 
 use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\ProductQuestionAnswerFactory;
-use \Bhavin\ProductQA\Model\ProductQuestionFactory;
+use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
+use \Bhavin\ProductQA\Model\QuestionFactory;
 use \Bhavin\ProductQA\Model\ResourceModel\ProductqaAction\CollectionFactory as ActionCollection;
 use \Bhavin\ProductQA\Model\Source\ActionType;
 use \Magento\Customer\Model\Session as CustomerSession;
@@ -17,11 +17,11 @@ class Action extends \Magento\Framework\App\Action\Action {
 	 */
 	protected $_roductqaActionFactory = false;
 	/**
-	 * @var \Bhavin\ProductQA\Model\ProductQuestionAnswer
+	 * @var \Bhavin\ProductQA\Model\QuestionAnswer
 	 */
 	protected $_productQuestionAnswerFactory = false;
 	/**
-	 * @var \Bhavin\ProductQA\Model\ProductQuestion
+	 * @var \Bhavin\ProductQA\Model\Question
 	 */
 	protected $_productQuestionFactory = false;
 	/**
@@ -46,8 +46,8 @@ class Action extends \Magento\Framework\App\Action\Action {
 		StoreManagerInterface $storeManager,
 		CustomerSession $_customerSession,
 		ActionCollection $actionCollectionFactory,
-		ProductQuestionAnswerFactory $productQuestionAnswerFactory,
-		ProductQuestionFactory $productQuestionFactory
+		QuestionAnswerFactory $productQuestionAnswerFactory,
+		QuestionFactory $productQuestionFactory
 	) {
 		$this->_helper = $helper;
 
