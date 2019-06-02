@@ -20,6 +20,9 @@ class ProductqaAction extends \Magento\Framework\Model\AbstractModel {
 		$this->_init('Bhavin\ProductQA\Model\ResourceModel\ProductqaAction');
 	}
 
+	/**
+	 * @return mixed
+	 */
 	public function getDefaultValues() {
 		$values = [];
 

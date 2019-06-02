@@ -73,12 +73,4 @@ class Delete extends \Bhavin\ProductQA\Controller\Adminhtml\Product\Question {
 
 		return $resultRedirect;
 	}
-
-	/**
-	 * Check permission via ACL resource
-	 */
-	protected function _isAllowed() {
-		return $this->_authorization->isAllowed(Self::RESOURCE_ID);
-	}
-
 }

@@ -7,12 +7,12 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\System\Config;
 
+use Bhavin\ProductQA\Helper\Data;
 use Magento\Backend\Block\Template\Context;
 use Magento\Cms\Model\Wysiwyg\Config as WysiwygConfig;
 use Magento\Framework\Data\Form\Element\AbstractElement;
+use Magento\Framework\Module\Dir\Reader;
 use Magento\Framework\Registry;
-use \Bhavin\ProductQA\Helper\Data;
-use \Magento\Framework\Module\Dir\Reader;
 
 class Editor extends \Magento\Config\Block\System\Config\Form\Field {
 	/**

@@ -1,16 +1,16 @@
 <?php
 namespace Bhavin\ProductQA\Controller\Question;
 
-use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Bhavin\ProductQA\Model\Source\Status;
-use \Bhavin\ProductQA\Model\Source\UserType;
-use \Magento\Captcha\Helper\Data as CaptchaHelper;
-use \Magento\Captcha\Observer\CaptchaStringResolver;
-use \Magento\Customer\Model\Session as CustomerSession;
-use \Magento\Framework\App\Action\Context;
-use \Magento\Framework\Controller\Result\JsonFactory;
-use \Magento\Store\Model\StoreManagerInterface;
+use Bhavin\ProductQA\Helper\Data;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Bhavin\ProductQA\Model\Source\Status;
+use Bhavin\ProductQA\Model\Source\UserType;
+use Magento\Captcha\Helper\Data as CaptchaHelper;
+use Magento\Captcha\Observer\CaptchaStringResolver;
+use Magento\Customer\Model\Session as CustomerSession;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Store\Model\StoreManagerInterface;
 
 class Ask extends \Magento\Framework\App\Action\Action {
 	/**

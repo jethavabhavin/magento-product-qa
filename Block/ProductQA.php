@@ -7,15 +7,15 @@
  */
 namespace Bhavin\ProductQA\Block;
 
+use Bhavin\ProductQA\Helper\Data;
+use Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory as AnswerCollection;
+use Bhavin\ProductQA\Model\ResourceModel\Question\CollectionFactory as QuestionCollection;
+use Bhavin\ProductQA\Model\Source\ActionType;
 use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Backend\Block\Template\Context;
+use Magento\Catalog\Model\ProductFactory;
 use Magento\Customer\Model\Session as CustomerSession;
-use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory as AnswerCollection;
-use \Bhavin\ProductQA\Model\ResourceModel\Question\CollectionFactory as QuestionCollection;
-use \Bhavin\ProductQA\Model\Source\ActionType;
-use \Magento\Backend\Block\Template\Context;
-use \Magento\Catalog\Model\ProductFactory;
-use \Magento\Framework\Registry;
+use Magento\Framework\Registry;
 
 class ProductQA extends \Magento\Framework\View\Element\Template {
 	/**

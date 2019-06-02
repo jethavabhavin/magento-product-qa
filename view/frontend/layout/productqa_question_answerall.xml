@@ -10,6 +10,6 @@
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
 	
 	<container name="root" label="Root">
-        <block class="Bhavin\ProductQA\Block\ProductQAnswer" name="productqa.answer.all" template="Bhavin_ProductQA::productqa/product_question_answer.phtml"/>
+        <block class="Bhavin\ProductQA\Block\ProductQAnswer" name="productqa.answer.all" template="Bhavin_ProductQA::productqa/question_answer.phtml"/>
     </container>
 </layout>

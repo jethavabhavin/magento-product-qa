@@ -7,7 +7,7 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\Question\Edit\Tab\Renderer;
 
-use \Magento\Framework\App\ObjectManager;
+use Magento\Framework\App\ObjectManager;
 
 /**
  * @method string getValue()

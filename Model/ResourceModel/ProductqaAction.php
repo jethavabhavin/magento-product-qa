@@ -7,8 +7,8 @@
  */
 namespace Bhavin\ProductQA\Model\ResourceModel;
 
-use \Magento\Framework\Model\ResourceModel\Db\Context;
-use \Magento\Framework\Stdlib\DateTime\DateTime;
+use Magento\Framework\Model\ResourceModel\Db\Context;
+use Magento\Framework\Stdlib\DateTime\DateTime;
 
 class ProductqaAction extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb {
 

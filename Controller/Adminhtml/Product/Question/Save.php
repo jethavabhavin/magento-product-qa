@@ -7,13 +7,13 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\Question;
 
-use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Bhavin\ProductQA\Model\ResourceModel\Image;
-use \Bhavin\ProductQA\Model\Upload;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Backend\Model\View\Result\RedirectFactory;
-use \Magento\Framework\Registry;
+use Bhavin\ProductQA\Helper\Data;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Bhavin\ProductQA\Model\ResourceModel\Image;
+use Bhavin\ProductQA\Model\Upload;
+use Magento\Backend\App\Action\Context;
+use Magento\Backend\Model\View\Result\RedirectFactory;
+use Magento\Framework\Registry;
 
 class Save extends \Bhavin\ProductQA\Controller\Adminhtml\Product\Question {
 	/**

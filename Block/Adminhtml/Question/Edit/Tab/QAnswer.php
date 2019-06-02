@@ -7,12 +7,12 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\Question\Edit\Tab;
 
+use Bhavin\ProductQA\Helper\Data;
+use Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory as AnswerCollection;
 use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Backend\Block\Template\Context;
 use Magento\Customer\Model\Session as CustomerSession;
-use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory as AnswerCollection;
-use \Magento\Backend\Block\Template\Context;
-use \Magento\Framework\Registry;
+use Magento\Framework\Registry;
 
 class QAnswer extends \Bhavin\ProductQA\Block\ProductQAnswer {
 	/**

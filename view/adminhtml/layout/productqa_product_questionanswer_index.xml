@@ -7,7 +7,7 @@
  * @author    Bhavin
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/page_configuration.xsd">
     <update handle="styles"/>
     <body>
         <referenceBlock name="menu">

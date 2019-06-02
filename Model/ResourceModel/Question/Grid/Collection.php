@@ -7,11 +7,11 @@
  */
 namespace Bhavin\ProductQA\Model\ResourceModel\Question\Grid;
 
-use \Magento\Framework\Data\Collection\Db\FetchStrategyInterface;
-use \Magento\Framework\Data\Collection\EntityFactoryInterface;
-use \Magento\Framework\DB\Adapter\AdapterInterface;
-use \Magento\Framework\Event\ManagerInterface;
-use \Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+use Magento\Framework\Data\Collection\Db\FetchStrategyInterface;
+use Magento\Framework\Data\Collection\EntityFactoryInterface;
+use Magento\Framework\DB\Adapter\AdapterInterface;
+use Magento\Framework\Event\ManagerInterface;
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use \Psr\Log\LoggerInterface;
 
 class Collection extends \Bhavin\ProductQA\Model\ResourceModel\Question\Collection implements \Magento\Framework\Api\Search\SearchResultInterface {

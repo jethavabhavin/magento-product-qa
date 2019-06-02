@@ -48,7 +48,7 @@
 			<form action="<?php  echo $this->getFormUrl()?>" method="post" id="question-form">
 				<input type="hidden" value="<?php  echo $this->getFormKey();?>" name="form_key"/>
 				<fieldset class="fieldset">					
-					<legend class="legend "><span><?php  echo __('You\'re Question')?> : </span><strong><?php  echo $this->getProduct()->getName()?></strong></legend>
+					<legend class="legend "><span><?php  echo __("You're Question for ")?> : </span><strong><?php  echo $this->getProduct()->getName()?></strong></legend>
 					
 					<div class="field required">
 						<label class="label" for="name"> <?php  echo __('Name')?> : </label>

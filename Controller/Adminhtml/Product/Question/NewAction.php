@@ -7,8 +7,8 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\Question;
 
-use \Magento\Backend\App\Action\Context;
-use \Magento\Backend\Model\View\Result\ForwardFactory;
+use Magento\Backend\App\Action\Context;
+use Magento\Backend\Model\View\Result\ForwardFactory;
 
 class NewAction extends \Magento\Backend\App\Action {
 	/**

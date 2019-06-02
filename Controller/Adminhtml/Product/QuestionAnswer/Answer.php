@@ -1,9 +1,9 @@
 <?php
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\QuestionAnswer;
 
-use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Framework\View\Result\LayoutFactory;
+use Bhavin\ProductQA\Model\QuestionAnswerFactory;
+use Magento\Backend\App\Action\Context;
+use Magento\Framework\View\Result\LayoutFactory;
 
 class Answer extends \Magento\Backend\App\Action {
 	/**

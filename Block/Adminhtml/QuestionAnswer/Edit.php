@@ -7,8 +7,8 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\QuestionAnswer;
 
-use \Magento\Backend\Block\Widget\Context;
-use \Magento\Framework\Registry;
+use Magento\Backend\Block\Widget\Context;
+use Magento\Framework\Registry;
 
 class Edit extends \Magento\Backend\Block\Widget\Form\Container {
 	/**

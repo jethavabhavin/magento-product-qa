@@ -7,7 +7,7 @@
  * @author    Bhavin
  */
  -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <productqa>
             <general>
@@ -15,7 +15,6 @@
                 <qpaze_size>5</qpaze_size>
                 <max_question_lenght>255</max_question_lenght>
                 <sendemail>0</sendemail>
-                <!-- <anspaze_size>10</anspaze_size> -->
             </general>				
         </productqa>
 		<customer>

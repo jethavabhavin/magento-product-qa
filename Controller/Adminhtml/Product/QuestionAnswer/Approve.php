@@ -7,13 +7,13 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\QuestionAnswer;
 
+use Bhavin\ProductQA\Helper\Email as QaEmailHelper;
+use Bhavin\ProductQA\Model\QuestionAnswerFactory;
 use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Backend\App\Action\Context;
+use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\UrlInterface;
-use \Bhavin\ProductQA\Helper\Email as QaEmailHelper;
-use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Framework\Controller\Result\JsonFactory;
-use \Magento\Ui\Component\MassAction\Filter;
+use Magento\Ui\Component\MassAction\Filter;
 
 class Approve extends \Magento\Backend\App\Action {
 	const MAIL_SEND_SUCCESS = 1;

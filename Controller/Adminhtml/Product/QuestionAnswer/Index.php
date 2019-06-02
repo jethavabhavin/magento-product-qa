@@ -7,8 +7,8 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\QuestionAnswer;
 
-use \Magento\Backend\App\Action\Context;
-use \Magento\Framework\View\Result\PageFactory;
+use Magento\Backend\App\Action\Context;
+use Magento\Framework\View\Result\PageFactory;
 
 class Index extends \Magento\Backend\App\Action {
 	/**

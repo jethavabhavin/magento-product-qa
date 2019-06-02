@@ -7,12 +7,12 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\Question;
 
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Backend\Model\View\Result\RedirectFactory;
-use \Magento\Framework\Controller\Result\JsonFactory;
-use \Magento\Framework\Registry;
-use \Magento\Framework\View\Result\PageFactory;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Magento\Backend\App\Action\Context;
+use Magento\Backend\Model\View\Result\RedirectFactory;
+use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Framework\Registry;
+use Magento\Framework\View\Result\PageFactory;
 
 class Edit extends \Bhavin\ProductQA\Controller\Adminhtml\Product\Question {
 	/**

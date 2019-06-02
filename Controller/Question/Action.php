@@ -1,15 +1,15 @@
 <?php
 namespace Bhavin\ProductQA\Controller\Question;
 
-use \Bhavin\ProductQA\Helper\Data;
-use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Bhavin\ProductQA\Model\ResourceModel\ProductqaAction\CollectionFactory as ActionCollection;
-use \Bhavin\ProductQA\Model\Source\ActionType;
-use \Magento\Customer\Model\Session as CustomerSession;
-use \Magento\Framework\App\Action\Context;
-use \Magento\Framework\Controller\Result\JsonFactory;
-use \Magento\Store\Model\StoreManagerInterface;
+use Bhavin\ProductQA\Helper\Data;
+use Bhavin\ProductQA\Model\QuestionAnswerFactory;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Bhavin\ProductQA\Model\ResourceModel\ProductqaAction\CollectionFactory as ActionCollection;
+use Bhavin\ProductQA\Model\Source\ActionType;
+use Magento\Customer\Model\Session as CustomerSession;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Store\Model\StoreManagerInterface;
 
 class Action extends \Magento\Framework\App\Action\Action {
 	/**

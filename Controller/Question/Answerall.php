@@ -1,9 +1,9 @@
 <?php
 namespace Bhavin\ProductQA\Controller\Question;
 
-use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Magento\Framework\App\Action\Context;
-use \Magento\Framework\View\Result\LayoutFactory;
+use Bhavin\ProductQA\Model\QuestionAnswerFactory;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\View\Result\LayoutFactory;
 
 class Answerall extends \Magento\Framework\App\Action\Action {
 	/**

@@ -7,10 +7,10 @@
  */
 namespace Bhavin\ProductQA\Ui\Component\Listing\Column;
 
+use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
-use \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 
 /**
  * Class Thumbnail

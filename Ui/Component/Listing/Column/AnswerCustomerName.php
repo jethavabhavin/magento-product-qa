@@ -7,10 +7,10 @@
  */
 namespace Bhavin\ProductQA\Ui\Component\Listing\Column;
 
+use Bhavin\ProductQA\Model\Source\UserType;
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
-use \Bhavin\ProductQA\Model\Source\UserType;
 
 /**
  * Class Thumbnail

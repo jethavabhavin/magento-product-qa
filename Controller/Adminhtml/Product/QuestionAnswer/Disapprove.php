@@ -7,12 +7,12 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\QuestionAnswer;
 
+use Bhavin\ProductQA\Model\QuestionAnswerFactory;
 use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Backend\App\Action\Context;
+use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\UrlInterface;
-use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Framework\Controller\Result\JsonFactory;
-use \Magento\Ui\Component\MassAction\Filter;
+use Magento\Ui\Component\MassAction\Filter;
 
 class Disapprove extends \Magento\Backend\App\Action {
 

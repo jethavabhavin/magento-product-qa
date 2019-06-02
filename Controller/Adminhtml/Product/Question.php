@@ -7,10 +7,10 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product;
 
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Backend\Model\View\Result\RedirectFactory;
-use \Magento\Framework\Registry;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Magento\Backend\App\Action\Context;
+use Magento\Backend\Model\View\Result\RedirectFactory;
+use Magento\Framework\Registry;
 
 abstract class Question extends \Magento\Backend\App\Action {
 	/**

@@ -7,13 +7,14 @@
  */
 namespace Bhavin\ProductQA\Helper;
 
+use Bhavin\ProductQA\Helper\Data as QaHelper;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Catalog\Helper\ImageFactory;
+use Magento\Catalog\Model\Product;
 use Magento\Framework\Mail\Template\TransportBuilder;
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Bhavin\ProductQA\Model\Source\Status;
-use \Magento\Catalog\Helper\ImageFactory;
-use \Magento\Catalog\Model\Product;
-use \Magento\Framework\Stdlib\DateTime\TimezoneInterface;
-use \Magento\Store\Model\StoreManagerInterface;
+use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
+use Magento\Store\Model\StoreManagerInterface;
 
 class Email {
 	const MAIL_SEND_SUCCESS = 1;

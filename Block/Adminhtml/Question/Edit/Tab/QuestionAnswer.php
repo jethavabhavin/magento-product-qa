@@ -7,7 +7,7 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\Question\Edit\Tab;
 
-use \Magento\Framework\Registry;
+use Magento\Framework\Registry;
 
 class QuestionAnswer extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface {
 	/**

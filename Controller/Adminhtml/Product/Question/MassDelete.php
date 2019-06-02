@@ -7,9 +7,9 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\Question;
 
-use \Bhavin\ProductQA\Model\ResourceModel\Question\CollectionFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Ui\Component\MassAction\Filter;
+use Bhavin\ProductQA\Model\ResourceModel\Question\CollectionFactory;
+use Magento\Backend\App\Action\Context;
+use Magento\Ui\Component\MassAction\Filter;
 
 class MassDelete extends \Magento\Backend\App\Action {
 	/**

@@ -7,10 +7,10 @@
  */
 namespace Bhavin\ProductQA\Controller\Adminhtml\Product\QuestionAnswer;
 
+use Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory;
 use Bhavin\ProductQA\Model\Source\Status;
-use \Bhavin\ProductQA\Model\ResourceModel\QuestionAnswer\CollectionFactory;
-use \Magento\Backend\App\Action\Context;
-use \Magento\Ui\Component\MassAction\Filter;
+use Magento\Backend\App\Action\Context;
+use Magento\Ui\Component\MassAction\Filter;
 
 class MassApprove extends \Magento\Backend\App\Action {
 	/**

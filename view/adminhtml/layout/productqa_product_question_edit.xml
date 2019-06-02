@@ -7,11 +7,8 @@
  * @author    Bhavin
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/page_configuration.xsd">
 	<update handle="editor"/>
-	<head>
-		 <css src="Bhavin_ProductQA::css/style.css" />
-	</head>
     <body>
         <referenceContainer name="content">
             <block class="Bhavin\ProductQA\Block\Adminhtml\Question\Edit" name="bhavin_productqa_product_question_edit"/> 

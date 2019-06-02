@@ -1,16 +1,17 @@
 <?php
 namespace Bhavin\ProductQA\Controller\Question;
 
-use \Bhavin\ProductQA\Helper\Email as QaEmailHelper;
-use \Bhavin\ProductQA\Model\QuestionAnswerFactory;
-use \Bhavin\ProductQA\Model\QuestionFactory;
-use \Bhavin\ProductQA\Model\Source\Status;
-use \Bhavin\ProductQA\Model\Source\UserType;
-use \Magento\Catalog\Model\Product;
-use \Magento\Customer\Model\Session as CustomerSession;
-use \Magento\Framework\App\Action\Context;
-use \Magento\Framework\Controller\Result\JsonFactory;
-use \Magento\Framework\Stdlib\DateTime\TimezoneInterface;
+use Bhavin\ProductQA\Helper\Data as QaHelper;
+use Bhavin\ProductQA\Helper\Email as QaEmailHelper;
+use Bhavin\ProductQA\Model\QuestionAnswerFactory;
+use Bhavin\ProductQA\Model\QuestionFactory;
+use Bhavin\ProductQA\Model\Source\Status;
+use Bhavin\ProductQA\Model\Source\UserType;
+use Magento\Catalog\Model\Product;
+use Magento\Customer\Model\Session as CustomerSession;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 
 class Answer extends \Magento\Framework\App\Action\Action {
 	/**
@@ -38,8 +39,21 @@ class Answer extends \Magento\Framework\App\Action\Action {
 	 */
 	protected $_status;
 
+	/**
+	 * @var mixed
+	 */
 	protected $_resultJsonFactory = false;
 
+	/**
+	 * @param Context $context
+	 * @param JsonFactory $resultJsonFactory
+	 * @param CustomerSession $_customerSession
+	 * @param QuestionAnswerFactory $productQAnswer
+	 * @param QaEmailHelper $qaEmailHelper
+	 * @param QaHelper $qaHelper
+	 * @param TimezoneInterface $timezone
+	 * @param Status $status
+	 */
 	public function __construct(
 		Context $context,
 		JsonFactory $resultJsonFactory,
@@ -51,27 +65,22 @@ class Answer extends \Magento\Framework\App\Action\Action {
 		Status $status
 	) {
 		$this->_productQAnswer = $productQAnswer;
-
 		$this->_qaHelper = $qaHelper;
-
 		$this->_qaEmailHelper = $qaEmailHelper;
-
 		$this->_timezone = $timezone;
-
 		$this->_customerSession = $_customerSession;
-
 		$this->_resultJsonFactory = $resultJsonFactory;
-
 		$this->_status = $status->getOptionArray();
 
 		parent::__construct($context);
 	}
 
+	/**
+	 * @return mixed
+	 */
 	public function execute() {
 		$name = $this->getRequest()->getPost("name");
-
 		$email = $this->getRequest()->getPost("email");
-
 		$answer = $this->getRequest()->getPost("answer");
 
 		$answerdata = [];

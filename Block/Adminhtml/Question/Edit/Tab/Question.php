@@ -7,11 +7,11 @@
  */
 namespace Bhavin\ProductQA\Block\Adminhtml\Question\Edit\Tab;
 
-use \Bhavin\ProductQA\Model\Source\Status;
-use \Magento\Backend\Block\Template\Context;
-use \Magento\Cms\Ui\Component\Listing\Column\Cms\Options;
-use \Magento\Framework\Data\FormFactory;
-use \Magento\Framework\Registry;
+use Bhavin\ProductQA\Model\Source\Status;
+use Magento\Backend\Block\Template\Context;
+use Magento\Cms\Ui\Component\Listing\Column\Cms\Options;
+use Magento\Framework\Data\FormFactory;
+use Magento\Framework\Registry;
 
 class Question extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface {
 	const FORM_NAME = 'bhavin_productqa_question_form';
