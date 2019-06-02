@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category  Bhavin Product Question Answser
+ * @package   Bhavin_ProductQA
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+ -->
+	<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+		<system>
+			<tab id="bhavin" translate="label" sortOrder="10">
+				<label>Bhavin</label>
+			</tab>
+			<section id="bhavin_productqa" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Product Q/A</label>
+				<tab>bhavin</tab>
+				<resource>Bhavin_ProductQA::bhavin_productqa</resource>
+				<group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>General</label>
+					<field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Enable Product Q/A</label>
+						<source_model>Bhavin\ProductQA\Model\Source\StatusExtention</source_model>
+						<comment>
+							`Enable Product Q/A` setting.
+						</comment>
+					</field>
+					<field id="qpaze_size" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Question Page Size</label>                    
+						<comment>
+							Product Question Load Per Page Size
+						</comment>
+					</field>
+					<field id="max_question_lenght" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Question Max Char</label>                    
+						<comment>
+							Max character allow in question
+						</comment>
+					</field>
+					 <field id="captcha" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Enable Captcha</label>
+						<source_model>Bhavin\ProductQA\Model\Source\StatusExtention</source_model>
+						<comment>
+							Captcha for frontend question answer post
+						</comment>
+					</field>
+					<field id="sendemail" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Enable Send E-mail </label>                    
+						<source_model>Bhavin\ProductQA\Model\Source\StatusExtention</source_model>
+						<comment>
+							if enable then email send to user who is connected with question else not send mail to anyone.
+						</comment>
+					</field>				
+					<field id="email_subject" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>E-mail Subject</label>
+						 <depends>
+							<field id="sendemail" >1</field>
+						</depends>
+						<comment>
+							set email subject here						
+						</comment>
+					</field>
+					<field id="email_template" translate="label comment" type="editor" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>E-mail template</label>
+						 <depends>
+							<field id="sendemail" >1</field>
+						</depends>
+						<frontend_model>Bhavin\ProductQA\Block\Adminhtml\System\Config\Editor</frontend_model>
+						<comment>
+							set design of email template. You can also use module pre define shortcode in template.
+							short code are {{var question}}, {{var question_username}},{{var question_date}}, 
+							  {{var new_answer}}, {{var new_answer_username}}, {{var new_answer_date}},
+							  {{var product_url}},{{var product_name}},{{var product_image}}
+						</comment>
+					</field>
+					<field id="email_template_css" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>E-mail Css</label>
+						 <depends>
+							<field id="sendemail" >1</field>
+						</depends>
+						<comment>
+							set you email template css here
+						</comment>
+					</field>
+				</group>
+			</section>
+		</system>
+	</config>

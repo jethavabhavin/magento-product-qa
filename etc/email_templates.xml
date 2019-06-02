@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+  /**
+ * @category  Bhavin Product Question Answser
+ * @package   Bhavin_ProductQA
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="productqa_email_template"
+              label="Product QA Email Template"
+              file="productqa_email_template.html" type="html"
+              module="Bhavin_ProductQA" area="frontend"/>
+</config>

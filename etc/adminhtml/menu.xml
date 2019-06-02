@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category  Bhavin Product Question Answser
+ * @package   Bhavin_ProductQA
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+			<add id="Bhavin_ProductQA::productqa" title="Product Question / Answer" module="Bhavin_ProductQA" 
+				sortOrder="51" resource="Bhavin_ProductQA::productqa" parent="Magento_Catalog::catalog" />
+				
+			<add id="Bhavin_ProductQA::product_question" title="Questions" module="Bhavin_ProductQA" 
+				sortOrder="10" action="bhavin_productqa/product_question" resource="Bhavin_ProductQA::product_question" 
+				parent="Bhavin_ProductQA::productqa"/>
+				
+			<add id="Bhavin_ProductQA::product_questionanswer" title="Answers" module="Bhavin_ProductQA" 
+				sortOrder="10" action="bhavin_productqa/product_questionanswer" resource="Bhavin_ProductQA::product_questionanswer" 
+				parent="Bhavin_ProductQA::productqa"/>
+
+    </menu>
+</config>
+

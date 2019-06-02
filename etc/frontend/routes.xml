@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+ /**
+ * @category  Bhavin Product Question Answser
+ * @package   Bhavin_ProductQA
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="standard">
+        <route id="productqa" frontName="productqa">
+            <module name="Bhavin_ProductQA" />
+        </route>
+    </router>
+</config>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category  Bhavin Product Question Answser
+ * @package   Bhavin_ProductQA
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+    <default>
+        <bhavin_productqa>
+            <general>
+                <enable>0</enable>
+                <qpaze_size>5</qpaze_size>
+                <max_question_lenght>255</max_question_lenght>
+                <sendemail>0</sendemail>
+                <!-- <anspaze_size>10</anspaze_size> -->
+            </general>				
+        </bhavin_productqa>
+		<customer>
+            <captcha>
+                <shown_to_logged_in_user>
+                    <qa_captcha_form_1>1</qa_captcha_form_1>
+                </shown_to_logged_in_user>
+                <always_for>
+                    <qa_captcha_form_1>1</qa_captcha_form_1>
+                </always_for>
+            </captcha>
+        </customer>
+		<captcha translate="label">
+            <frontend>
+                <areas>
+                    <qa_captcha_form_1>
+                        <label>Question / Answer Form </label>
+                    </qa_captcha_form_1>
+                </areas>
+            </frontend>
+        </captcha>
+    </default>
+</config>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category  BhavinAdvancesizechart
+ * @package   Bhavin_Advancesizechart
+ * @copyright Copyright (c) 2019 Bhavin
+ * @author    Bhavin
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+	
+	<container name="root" label="Root">
+        <block class="Bhavin\ProductQA\Block\ProductQA" name="productqa.question" template="Bhavin_ProductQA::productqa/product_question.phtml">	
+			<block class="Bhavin\ProductQA\Block\ProductQAnswer" name="product.question.answers" as="answer" template="productqa/product_question_answer.phtml" />
+		</block>
+    </container>
+</layout>

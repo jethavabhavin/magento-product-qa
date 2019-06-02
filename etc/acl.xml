@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Bhavin_ProductQA::bhavin_productqa" title="Product Question/Answer" sortOrder="50"></resource>
+                        </resource>
+                    </resource>
+                </resource>
+                <resource id="Magento_Catalog::catalog">
+					<resource id="Bhavin_ProductQA::productqa" title="Product Question / Answer" translate="title" sortOrder="10">
+						<resource id="Bhavin_ProductQA::product_question" title="Product Question" translate="title" sortOrder="23">					
+								<resource id="Bhavin_ProductQA::product_question_grid" title="Product Question Grid" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::product_question_new_edit" title="Create / Edit Product Question" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productanswer_new" title="New Product Answer" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productqnswer_approve" title="Approve Product Answer" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productqnswer_disapprove" title="Disapprove Product Answer" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::product_question_save" title="Save Product Question" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::product_question_delete" title="Delete Product Question" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::product_question_massdel" title="Mass Delete Product Question" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::product_question_massapprove" title="Mass Approve Product Question" sortOrder="20" />
+						</resource>	
+						<resource id="Bhavin_ProductQA::product_questionanswer" title="Product Answer" translate="title" sortOrder="23">					
+								<resource id="Bhavin_ProductQA::productanswer_grid" title="Product Answer Grid" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productanswer_save" title="Save Product Answer" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productanswer_delete" title="Delete Product Answer" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productanswer_massdel" title="Mass Delete Product Answer" sortOrder="20" />
+								<resource id="Bhavin_ProductQA::productanswer_massapprove" title="Mass Approve Product Answer" sortOrder="20" />
+						</resource>	
+					</resource>
+				</resource>
+			</resource>
+        </resources>
+    </acl>
+</config>
